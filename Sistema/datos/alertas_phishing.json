@@ -1,0 +1,195 @@
+[
+  {
+    "id": "alert-ee82d07914d6",
+    "tipo_amenaza": "phishing",
+    "nivel_severidad": "medio",
+    "descripcion": "Phishing detectado — no-reply@access-accsec.com",
+    "equipo": "PC-GERENCIA",
+    "fecha": "2026-11-06T15:14:07",
+    "estado": "nueva",
+    "notificar": false,
+    "n_eventos": 1,
+    "motivos": [
+      "SPF, DKIM y DMARC no superados"
+    ],
+    "mitre": [
+      {
+        "id": "T1566",
+        "nombre": "Phishing"
+      },
+      {
+        "id": "T1566.002",
+        "nombre": "Spearphishing Link"
+      }
+    ],
+    "resultado_analisis": {
+      "probabilidad": 0.6128,
+      "origen_deteccion": "modelo+regla",
+      "reglas": [
+        "autenticacion"
+      ],
+      "es_malicioso": true,
+      "nivel_riesgo": "medio",
+      "modelo": "svm",
+      "vector": {
+        "rem_dominio_longitud": 17,
+        "rem_dominio_entropia": 2.133937566094917,
+        "rem_local_longitud": 8,
+        "rem_local_ratio_digitos": 0.0,
+        "rem_num_subdominios": 0,
+        "rem_tld_sospechoso": 0,
+        "rem_es_freemail": 0,
+        "rem_dominio_tiene_digitos": 0,
+        "rem_dominio_tiene_guion": 1,
+        "rem_sin_remitente": 0,
+        "disp_presente": 1,
+        "disp_longitud": 22,
+        "disp_contiene_correo": 0,
+        "disp_menciona_marca": 1,
+        "disp_marca_no_coincide": 1,
+        "rem_distancia_marca": 10.0,
+        "rem_es_lookalike": 0,
+        "rem_dominio_en_display": 0,
+        "disp_marca_sin_respaldo_url": 0,
+        "asu_longitud": 41,
+        "asu_num_palabras": 5,
+        "asu_ratio_mayusculas": 0.024390243902439025,
+        "asu_num_exclamacion": 0,
+        "asu_num_interrogacion": 0,
+        "asu_tiene_no_ascii": 0,
+        "asu_num_digitos": 0,
+        "asu_tiene_urgencia": 1,
+        "asu_entropia": 3.7508616880101027,
+        "asu_vacio": 0,
+        "url_algun_host_ip": 0,
+        "url_algun_tld_sospechoso": 0,
+        "url_algun_punycode": 0,
+        "url_algun_puerto_no_estandar": 0,
+        "url_alguna_https": 0,
+        "url_todas_https": 0,
+        "url_dominio_coincide_remitente": 1,
+        "url_marca_en_subdominio": 1
+      },
+      "evento": {
+        "remitente": "Microsoft account team <no-reply@access-accsec.com>",
+        "asunto": "Microsoft account unusual signin activity",
+        "destinatario": "usuario@empresa.com",
+        "urls": [
+          "http://login-microsoftonline.access-accsec.com/verify?id=88213"
+        ],
+        "adjuntos": [],
+        "hallazgos_adjuntos": [],
+        "autenticacion": {
+          "spf": "fail",
+          "dkim": "none",
+          "dmarc": "fail"
+        },
+        "mecanismos_no_superados": [
+          "SPF",
+          "DKIM",
+          "DMARC"
+        ],
+        "severidad_modelo": "bajo",
+        "prevalencia_calibracion": 0.01,
+        "tabla_origen": "EmailEvents"
+      }
+    },
+    "recomendaciones": null
+  },
+  {
+    "id": "alert-b4d1cdf4d157",
+    "tipo_amenaza": "phishing",
+    "nivel_severidad": "alto",
+    "descripcion": "Phishing detectado — doble extension: Formato_2026.pdf.exe",
+    "equipo": "PC-RRHH",
+    "fecha": "2026-11-06T15:14:07",
+    "estado": "nueva",
+    "notificar": true,
+    "n_eventos": 1,
+    "motivos": [
+      "doble extension: Formato_2026.pdf.exe",
+      "adjunto ejecutable: Formato_2026.pdf.exe"
+    ],
+    "mitre": [
+      {
+        "id": "T1566",
+        "nombre": "Phishing"
+      },
+      {
+        "id": "T1566.001",
+        "nombre": "Spearphishing Attachment"
+      }
+    ],
+    "resultado_analisis": {
+      "probabilidad": 0.3572,
+      "origen_deteccion": "regla",
+      "reglas": [
+        "adjuntos"
+      ],
+      "es_malicioso": true,
+      "nivel_riesgo": "alto",
+      "modelo": "svm",
+      "vector": {
+        "rem_dominio_longitud": 19,
+        "rem_dominio_entropia": 3.1898980954642875,
+        "rem_local_longitud": 2,
+        "rem_local_ratio_digitos": 0.0,
+        "rem_num_subdominios": 0,
+        "rem_tld_sospechoso": 0,
+        "rem_es_freemail": 0,
+        "rem_dominio_tiene_digitos": 0,
+        "rem_dominio_tiene_guion": 1,
+        "rem_sin_remitente": 0,
+        "disp_presente": 1,
+        "disp_longitud": 16,
+        "disp_contiene_correo": 0,
+        "disp_menciona_marca": 0,
+        "disp_marca_no_coincide": 0,
+        "rem_distancia_marca": 11.0,
+        "rem_es_lookalike": 0,
+        "rem_dominio_en_display": 0,
+        "disp_marca_sin_respaldo_url": 0,
+        "asu_longitud": 23,
+        "asu_num_palabras": 3,
+        "asu_ratio_mayusculas": 0.043478260869565216,
+        "asu_num_exclamacion": 0,
+        "asu_num_interrogacion": 0,
+        "asu_tiene_no_ascii": 0,
+        "asu_num_digitos": 0,
+        "asu_tiene_urgencia": 0,
+        "asu_entropia": 3.642489673166126,
+        "asu_vacio": 0,
+        "url_algun_host_ip": 0,
+        "url_algun_tld_sospechoso": 0,
+        "url_algun_punycode": 0,
+        "url_algun_puerto_no_estandar": 0,
+        "url_alguna_https": 0,
+        "url_todas_https": 0,
+        "url_dominio_coincide_remitente": 0,
+        "url_marca_en_subdominio": 0
+      },
+      "evento": {
+        "remitente": "Recursos Humanos <rh@empresa-interna.com>",
+        "asunto": "Actualizacion de nomina",
+        "destinatario": "usuario@empresa.com",
+        "urls": [],
+        "adjuntos": [
+          "Formato_2026.pdf.exe"
+        ],
+        "hallazgos_adjuntos": [
+          "doble extension: Formato_2026.pdf.exe",
+          "adjunto ejecutable: Formato_2026.pdf.exe"
+        ],
+        "autenticacion": {
+          "spf": "pass",
+          "dkim": "pass"
+        },
+        "mecanismos_no_superados": [],
+        "severidad_modelo": "ninguna",
+        "prevalencia_calibracion": 0.01,
+        "tabla_origen": "EmailEvents"
+      }
+    },
+    "recomendaciones": null
+  }
+]

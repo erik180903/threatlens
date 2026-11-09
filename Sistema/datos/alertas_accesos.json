@@ -1,0 +1,324 @@
+[
+  {
+    "id": "alert-9d8f05b2a53c",
+    "tipo_amenaza": "acceso_remoto",
+    "nivel_severidad": "alto",
+    "descripcion": "Fuerza bruta — 180 autenticaciones fallidas contra SRV-CONTA",
+    "equipo": "SRV-CONTA",
+    "fecha": "2026-11-06T15:10:55",
+    "estado": "nueva",
+    "notificar": true,
+    "n_eventos": 1,
+    "motivos": [
+      "180 autenticaciones fallidas contra SRV-CONTA en 5 min (umbral 100)"
+    ],
+    "mitre": [
+      {
+        "id": "T1110",
+        "nombre": "Brute Force"
+      }
+    ],
+    "resultado_analisis": {
+      "probabilidad": null,
+      "origen_deteccion": "regla",
+      "reglas": [
+        "rafaga"
+      ],
+      "es_malicioso": true,
+      "nivel_riesgo": "alto",
+      "modelo": "solo_reglas",
+      "vector": {},
+      "evento": {
+        "equipo": "SRV-CONTA",
+        "cuenta": "administrador",
+        "origen": "192.168.1.80",
+        "ip_local": "",
+        "ip_remota": "",
+        "protocolo": "",
+        "puerto": "",
+        "proceso": "",
+        "intentos_fallidos": 180,
+        "cuentas_distintas": 0,
+        "tipo_logon": "",
+        "tabla_origen": "DeviceLogonEvents",
+        "mensaje": "Acceso remoto inusual: administrador -> SRV-CONTA. 180 autenticaciones fallidas contra SRV-CONTA en 5 min (umbral 100). Verifica si fue legitimo.",
+        "a2_fuera_de_rango": false
+      }
+    },
+    "recomendaciones": null
+  },
+  {
+    "id": "alert-25a17d82f9d4",
+    "tipo_amenaza": "acceso_remoto",
+    "nivel_severidad": "alto",
+    "descripcion": "Password spraying — 40 cuentas probadas desde 192.168.1.80",
+    "equipo": "192.168.1.80",
+    "fecha": "2026-11-06T15:10:55",
+    "estado": "nueva",
+    "notificar": true,
+    "n_eventos": 1,
+    "motivos": [
+      "intentos fallidos contra 40 cuentas distintas desde 192.168.1.80 (umbral 15)"
+    ],
+    "mitre": [
+      {
+        "id": "T1110.003",
+        "nombre": "Password Spraying"
+      }
+    ],
+    "resultado_analisis": {
+      "probabilidad": null,
+      "origen_deteccion": "regla",
+      "reglas": [
+        "rafaga"
+      ],
+      "es_malicioso": true,
+      "nivel_riesgo": "alto",
+      "modelo": "solo_reglas",
+      "vector": {},
+      "evento": {
+        "equipo": "192.168.1.80",
+        "cuenta": "",
+        "origen": "192.168.1.80",
+        "ip_local": "",
+        "ip_remota": "",
+        "protocolo": "",
+        "puerto": "",
+        "proceso": "",
+        "intentos_fallidos": 0,
+        "cuentas_distintas": 40,
+        "tipo_logon": "",
+        "tabla_origen": "DeviceLogonEvents",
+        "mensaje": "Acceso remoto inusual: Una cuenta -> un equipo. intentos fallidos contra 40 cuentas distintas desde 192.168.1.80 (umbral 15). Verifica si fue legitimo.",
+        "a2_fuera_de_rango": false
+      }
+    },
+    "recomendaciones": null
+  },
+  {
+    "id": "alert-2d4bc4f4a224",
+    "tipo_amenaza": "acceso_remoto",
+    "nivel_severidad": "alto",
+    "descripcion": "Herramienta de acceso remoto no autorizada — anydesk.exe",
+    "equipo": "PC-RECEPCION",
+    "fecha": "2026-11-06T15:10:55",
+    "estado": "nueva",
+    "notificar": true,
+    "n_eventos": 1,
+    "motivos": [
+      "herramienta de acceso remoto 'anydesk.exe' fuera del inventario autorizado"
+    ],
+    "mitre": [
+      {
+        "id": "T1219",
+        "nombre": "Remote Access Software"
+      }
+    ],
+    "resultado_analisis": {
+      "probabilidad": null,
+      "origen_deteccion": "regla",
+      "reglas": [
+        "procesos"
+      ],
+      "es_malicioso": true,
+      "nivel_riesgo": "alto",
+      "modelo": "solo_reglas",
+      "vector": {},
+      "evento": {
+        "equipo": "PC-RECEPCION",
+        "cuenta": "",
+        "origen": "",
+        "ip_local": "",
+        "ip_remota": "",
+        "protocolo": "",
+        "puerto": "",
+        "proceso": "C:\\Program Files\\AnyDesk\\AnyDesk.exe",
+        "intentos_fallidos": 0,
+        "cuentas_distintas": 0,
+        "tipo_logon": "",
+        "tabla_origen": "DeviceLogonEvents",
+        "mensaje": "Acceso remoto inusual: Una cuenta -> PC-RECEPCION. herramienta de acceso remoto 'anydesk.exe' fuera del inventario autorizado. Verifica si fue legitimo.",
+        "a2_fuera_de_rango": false
+      }
+    },
+    "recomendaciones": null
+  },
+  {
+    "id": "alert-49bb57a9d1ec",
+    "tipo_amenaza": "acceso_remoto",
+    "nivel_severidad": "alto",
+    "descripcion": "Conexion remota sospechosa — puerto 3389 en SRV-ARCHIVOS",
+    "equipo": "SRV-ARCHIVOS",
+    "fecha": "2026-11-06T15:10:55",
+    "estado": "nueva",
+    "notificar": true,
+    "n_eventos": 1,
+    "motivos": [
+      "conexion RDP entrante desde la IP publica 201.141.22.9"
+    ],
+    "mitre": [
+      {
+        "id": "T1021",
+        "nombre": "Remote Services"
+      },
+      {
+        "id": "T1021.001",
+        "nombre": "Remote Desktop Protocol"
+      }
+    ],
+    "resultado_analisis": {
+      "probabilidad": null,
+      "origen_deteccion": "regla",
+      "reglas": [
+        "conexion"
+      ],
+      "es_malicioso": true,
+      "nivel_riesgo": "alto",
+      "modelo": "solo_reglas",
+      "vector": {},
+      "evento": {
+        "equipo": "SRV-ARCHIVOS",
+        "cuenta": "",
+        "origen": "",
+        "ip_local": "",
+        "ip_remota": "201.141.22.9",
+        "protocolo": "",
+        "puerto": 3389,
+        "proceso": "",
+        "intentos_fallidos": 0,
+        "cuentas_distintas": 0,
+        "tipo_logon": "",
+        "tabla_origen": "DeviceLogonEvents",
+        "mensaje": "Acceso remoto inusual: Una cuenta -> SRV-ARCHIVOS. conexion RDP entrante desde la IP publica 201.141.22.9. Verifica si fue legitimo.",
+        "a2_fuera_de_rango": false
+      }
+    },
+    "recomendaciones": null
+  },
+  {
+    "id": "alert-fb6ed5834ce3",
+    "tipo_amenaza": "acceso_remoto",
+    "nivel_severidad": "medio",
+    "descripcion": "Conexion remota sospechosa — puerto 23 en SWITCH-1",
+    "equipo": "SWITCH-1",
+    "fecha": "2026-11-06T15:10:55",
+    "estado": "nueva",
+    "notificar": false,
+    "n_eventos": 1,
+    "motivos": [
+      "conexion Telnet entrante desde 192.168.1.44",
+      "Telnet transmite credenciales sin cifrar"
+    ],
+    "mitre": [
+      {
+        "id": "T1021",
+        "nombre": "Remote Services"
+      }
+    ],
+    "resultado_analisis": {
+      "probabilidad": null,
+      "origen_deteccion": "regla",
+      "reglas": [
+        "conexion"
+      ],
+      "es_malicioso": true,
+      "nivel_riesgo": "medio",
+      "modelo": "solo_reglas",
+      "vector": {},
+      "evento": {
+        "equipo": "SWITCH-1",
+        "cuenta": "",
+        "origen": "",
+        "ip_local": "",
+        "ip_remota": "192.168.1.44",
+        "protocolo": "",
+        "puerto": 23,
+        "proceso": "",
+        "intentos_fallidos": 0,
+        "cuentas_distintas": 0,
+        "tipo_logon": "",
+        "tabla_origen": "DeviceLogonEvents",
+        "mensaje": "Acceso remoto para revisar (medio): Una cuenta -> SWITCH-1. conexion Telnet entrante desde 192.168.1.44; Telnet transmite credenciales sin cifrar.",
+        "a2_fuera_de_rango": false
+      }
+    },
+    "recomendaciones": null
+  },
+  {
+    "id": "alert-ef96469e81d7",
+    "tipo_amenaza": "acceso_remoto",
+    "nivel_severidad": "alto",
+    "descripcion": "Fuerza bruta — 180 autenticaciones fallidas contra SRV-NOMINA",
+    "equipo": "SRV-NOMINA",
+    "fecha": "2026-11-06T15:10:55",
+    "estado": "nueva",
+    "notificar": true,
+    "n_eventos": 1,
+    "motivos": [
+      "180 autenticaciones fallidas contra SRV-NOMINA en 5 min (umbral 100)"
+    ],
+    "mitre": [
+      {
+        "id": "T1110",
+        "nombre": "Brute Force"
+      }
+    ],
+    "resultado_analisis": {
+      "probabilidad": 0.005,
+      "origen_deteccion": "regla",
+      "reglas": [
+        "rafaga"
+      ],
+      "es_malicioso": true,
+      "nivel_riesgo": "alto",
+      "modelo": "random_forest",
+      "vector": {
+        "ven_eventos": 0.0,
+        "ven_logon": 0.0,
+        "ven_logoff": 0.0,
+        "ven_tgs": 0.0,
+        "ven_tgt": 0.0,
+        "ven_fallos": 0.0,
+        "ven_tasa_fallo": 0.0,
+        "ven_tipos_logon": 0.0,
+        "ven_frac_network": 0.0,
+        "ven_frac_remoteint": 0.0,
+        "ven_frac_ntlm": 0.0,
+        "ven_frac_kerberos": 0.0,
+        "ven_duracion": 0.0,
+        "ven_hora_dia": 0.0,
+        "his_usr_eventos": 0.0,
+        "his_usr_destinos": 0.0,
+        "his_usr_origenes": 0.0,
+        "his_par_visto": 0.0,
+        "his_par_nuevo": 0.0,
+        "his_origen_visto": 0.0,
+        "his_origen_nuevo": 0.0,
+        "his_frac_destino": 0.0,
+        "his_usr_frac_hora": 0.0,
+        "his_dst_eventos": 0.0,
+        "his_dst_usuarios": 0.0,
+        "his_dst_nuevo": 0.0,
+        "his_frac_usr_en_dst": 0.0,
+        "his_dst_por_usuario": 0.0
+      },
+      "evento": {
+        "equipo": "SRV-NOMINA",
+        "cuenta": "respaldo",
+        "origen": "192.168.1.90",
+        "ip_local": "",
+        "ip_remota": "",
+        "protocolo": "",
+        "puerto": "",
+        "proceso": "",
+        "intentos_fallidos": 180,
+        "cuentas_distintas": 0,
+        "tipo_logon": "",
+        "tabla_origen": "DeviceLogonEvents",
+        "mensaje": "Acceso remoto inusual: respaldo -> SRV-NOMINA. 180 autenticaciones fallidas contra SRV-NOMINA en 5 min (umbral 100). Verifica si fue legitimo.",
+        "a2_fuera_de_rango": false
+      }
+    },
+    "recomendaciones": null
+  }
+]

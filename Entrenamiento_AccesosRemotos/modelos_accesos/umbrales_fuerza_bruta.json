@@ -1,0 +1,154 @@
+{
+  "ventana_segundos": 300,
+  "equipos_referencia": 50,
+  "dias_calibracion": 57.999976851851855,
+  "fondo": {
+    "filtrados": 292867986,
+    "fallos": 1090015,
+    "ventanas_con_fallos": 16704
+  },
+  "fuerza_bruta": {
+    "candidatos": [
+      {
+        "umbral": 3,
+        "por_dia": 966.3624546465735,
+        "con_pares": 76707,
+        "pyme_por_dia": 3.068986454035104,
+        "casos": 56049
+      },
+      {
+        "umbral": 5,
+        "por_dia": 703.5520049297593,
+        "con_pares": 54486,
+        "pyme_por_dia": 2.2343496091519284,
+        "casos": 40806
+      },
+      {
+        "umbral": 8,
+        "por_dia": 593.9485129104856,
+        "con_pares": 42178,
+        "pyme_por_dia": 1.8862694134606377,
+        "casos": 34449
+      },
+      {
+        "umbral": 10,
+        "por_dia": 556.2243599235153,
+        "con_pares": 38350,
+        "pyme_por_dia": 1.7664645576839282,
+        "casos": 32261
+      },
+      {
+        "umbral": 15,
+        "por_dia": 209.7242216332302,
+        "con_pares": 33813,
+        "pyme_por_dia": 0.6660449111827687,
+        "casos": 12164
+      },
+      {
+        "umbral": 20,
+        "por_dia": 201.9655978470617,
+        "con_pares": 31377,
+        "pyme_por_dia": 0.6414049728374672,
+        "casos": 11714
+      },
+      {
+        "umbral": 30,
+        "por_dia": 85.60348244072574,
+        "con_pares": 11821,
+        "pyme_por_dia": 0.2718606530764918,
+        "casos": 4965
+      },
+      {
+        "umbral": 50,
+        "por_dia": 45.72415617981967,
+        "con_pares": 10716,
+        "pyme_por_dia": 0.14521136998164275,
+        "casos": 2652
+      },
+      {
+        "umbral": 100,
+        "por_dia": 23.7413887856756,
+        "con_pares": 2528,
+        "pyme_por_dia": 0.07539821133662221,
+        "casos": 1377
+      }
+    ],
+    "recomendado": {
+      "umbral": 100,
+      "por_dia": 23.7413887856756,
+      "con_pares": 2528,
+      "pyme_por_dia": 0.07539821133662221,
+      "casos": 1377
+    },
+    "cumple_presupuesto": false
+  },
+  "spraying": {
+    "candidatos": [
+      {
+        "umbral": 3,
+        "por_dia": 19.4482836239957,
+        "con_pares": 1563,
+        "pyme_por_dia": 0.06176411211888878,
+        "casos": 1128
+      },
+      {
+        "umbral": 5,
+        "por_dia": 15.275868165656195,
+        "con_pares": 940,
+        "pyme_por_dia": 0.04851330083097115,
+        "casos": 886
+      },
+      {
+        "umbral": 8,
+        "por_dia": 13.724143408422496,
+        "con_pares": 805,
+        "pyme_por_dia": 0.043585313161910874,
+        "casos": 796
+      },
+      {
+        "umbral": 10,
+        "por_dia": 13.534488160316155,
+        "con_pares": 792,
+        "pyme_por_dia": 0.042983003557914616,
+        "casos": 785
+      },
+      {
+        "umbral": 15,
+        "por_dia": 6.0000023946369705,
+        "con_pares": 365,
+        "pyme_por_dia": 0.019054885653699727,
+        "casos": 348
+      },
+      {
+        "umbral": 20,
+        "por_dia": 1.0172417852976474,
+        "con_pares": 167,
+        "pyme_por_dia": 0.003230569694161736,
+        "casos": 59
+      },
+      {
+        "umbral": 30,
+        "por_dia": 0.017241386191485547,
+        "con_pares": 1,
+        "pyme_por_dia": 5.475541854511416e-05,
+        "casos": 1
+      },
+      {
+        "umbral": 50,
+        "por_dia": 0.017241386191485547,
+        "con_pares": 1,
+        "pyme_por_dia": 5.475541854511416e-05,
+        "casos": 1
+      }
+    ],
+    "recomendado": {
+      "umbral": 15,
+      "por_dia": 6.0000023946369705,
+      "con_pares": 365,
+      "pyme_por_dia": 0.019054885653699727,
+      "casos": 348
+    },
+    "cumple_presupuesto": true
+  },
+  "coincidencias_redteam": 0
+}

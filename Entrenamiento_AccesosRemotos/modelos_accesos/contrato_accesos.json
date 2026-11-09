@@ -1,0 +1,239 @@
+{
+  "prevalencia": 1.05276713858621e-05,
+  "tasa_negativos": 0.02,
+  "ventanas_por_dia": 922036.4310344828,
+  "bloques": {
+    "ajuste": [
+      1,
+      12
+    ],
+    "validacion": [
+      13,
+      16
+    ],
+    "prueba": [
+      17,
+      30
+    ],
+    "benigno": [
+      31,
+      58
+    ]
+  },
+  "caracteristicas": [
+    "ven_eventos",
+    "ven_logon",
+    "ven_logoff",
+    "ven_tgs",
+    "ven_tgt",
+    "ven_fallos",
+    "ven_tasa_fallo",
+    "ven_tipos_logon",
+    "ven_frac_network",
+    "ven_frac_remoteint",
+    "ven_frac_ntlm",
+    "ven_frac_kerberos",
+    "ven_duracion",
+    "ven_hora_dia",
+    "his_usr_eventos",
+    "his_usr_destinos",
+    "his_usr_origenes",
+    "his_par_visto",
+    "his_par_nuevo",
+    "his_origen_visto",
+    "his_origen_nuevo",
+    "his_frac_destino",
+    "his_usr_frac_hora",
+    "his_dst_eventos",
+    "his_dst_usuarios",
+    "his_dst_nuevo",
+    "his_frac_usr_en_dst",
+    "his_dst_por_usuario",
+    "con_destinos_usr",
+    "con_origenes_usr",
+    "con_eventos_usr",
+    "con_usuarios_dst",
+    "con_eventos_dst",
+    "con_destinos_nuevos_usr"
+  ],
+  "modelos": {
+    "random_forest": {
+      "hiperparametros": {
+        "n_estimators": 400,
+        "min_samples_leaf": 1,
+        "max_features": "sqrt",
+        "max_depth": null
+      },
+      "caracteristicas": [
+        "ven_eventos",
+        "ven_logon",
+        "ven_logoff",
+        "ven_tgs",
+        "ven_tgt",
+        "ven_fallos",
+        "ven_tasa_fallo",
+        "ven_tipos_logon",
+        "ven_frac_network",
+        "ven_frac_remoteint",
+        "ven_frac_ntlm",
+        "ven_frac_kerberos",
+        "ven_duracion",
+        "ven_hora_dia",
+        "his_usr_eventos",
+        "his_usr_destinos",
+        "his_usr_origenes",
+        "his_par_visto",
+        "his_par_nuevo",
+        "his_origen_visto",
+        "his_origen_nuevo",
+        "his_frac_destino",
+        "his_usr_frac_hora",
+        "his_dst_eventos",
+        "his_dst_usuarios",
+        "his_dst_nuevo",
+        "his_frac_usr_en_dst",
+        "his_dst_por_usuario"
+      ],
+      "pr_auc_prueba": 0.6532993252273249,
+      "operacion": {
+        "1e-03": {
+          "recall": 0.717391304347826,
+          "fpr": 0.0004929152627164781,
+          "precision": 0.015225511923212476,
+          "alertas_dia": 461.4446881384727
+        },
+        "1e-04": {
+          "recall": 0.6478260869565218,
+          "fpr": 7.393728940747171e-05,
+          "precision": 0.0846544195621323,
+          "alertas_dia": 74.46053755360448
+        },
+        "1e-05": {
+          "recall": 0.3130434782608696,
+          "fpr": 2.207083265894678e-06,
+          "precision": 0.6080247010379158,
+          "alertas_dia": 5.073670413222681
+        }
+      }
+    },
+    "svm": {
+      "hiperparametros": {
+        "clf__estimator__C": 10.0
+      },
+      "caracteristicas": [
+        "ven_eventos",
+        "ven_logon",
+        "ven_logoff",
+        "ven_tgs",
+        "ven_tgt",
+        "ven_fallos",
+        "ven_tasa_fallo",
+        "ven_tipos_logon",
+        "ven_frac_network",
+        "ven_frac_remoteint",
+        "ven_frac_ntlm",
+        "ven_frac_kerberos",
+        "ven_duracion",
+        "ven_hora_dia",
+        "his_usr_eventos",
+        "his_usr_destinos",
+        "his_usr_origenes",
+        "his_par_visto",
+        "his_par_nuevo",
+        "his_origen_visto",
+        "his_origen_nuevo",
+        "his_frac_destino",
+        "his_usr_frac_hora",
+        "his_dst_eventos",
+        "his_dst_usuarios",
+        "his_dst_nuevo",
+        "his_frac_usr_en_dst",
+        "his_dst_por_usuario"
+      ],
+      "pr_auc_prueba": 0.002624109240032772,
+      "operacion": {
+        "1e-03": {
+          "recall": 0.21739130434782608,
+          "fpr": 0.1035728999602725,
+          "precision": 2.209649182589611e-05,
+          "alertas_dia": 95499.09185473825
+        },
+        "1e-04": {
+          "recall": 0.0,
+          "fpr": 1.2874652384385621e-05,
+          "precision": 0.0,
+          "alertas_dia": 11.870773562389678
+        },
+        "1e-05": {
+          "recall": 0.0,
+          "fpr": 0.0,
+          "precision": 0.0,
+          "alertas_dia": 0.0
+        }
+      }
+    },
+    "xgboost": {
+      "hiperparametros": {
+        "subsample": 1.0,
+        "n_estimators": 400,
+        "min_child_weight": 1,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "colsample_bytree": 0.8
+      },
+      "caracteristicas": [
+        "ven_eventos",
+        "ven_logon",
+        "ven_logoff",
+        "ven_tgs",
+        "ven_tgt",
+        "ven_fallos",
+        "ven_tasa_fallo",
+        "ven_tipos_logon",
+        "ven_frac_network",
+        "ven_frac_remoteint",
+        "ven_frac_ntlm",
+        "ven_frac_kerberos",
+        "ven_duracion",
+        "ven_hora_dia",
+        "his_usr_eventos",
+        "his_usr_destinos",
+        "his_usr_origenes",
+        "his_par_visto",
+        "his_par_nuevo",
+        "his_origen_visto",
+        "his_origen_nuevo",
+        "his_frac_destino",
+        "his_usr_frac_hora",
+        "con_destinos_usr",
+        "con_origenes_usr",
+        "con_eventos_usr",
+        "con_usuarios_dst",
+        "con_eventos_dst",
+        "con_destinos_nuevos_usr"
+      ],
+      "pr_auc_prueba": 0.6193760742281351,
+      "operacion": {
+        "1e-03": {
+          "recall": 0.7956521739130434,
+          "fpr": 0.0008556126127451703,
+          "precision": 0.009697959491943466,
+          "alertas_dia": 796.6210078038538
+        },
+        "1e-04": {
+          "recall": 0.6260869565217392,
+          "fpr": 4.8923679060665357e-05,
+          "precision": 0.11963560073502029,
+          "alertas_dia": 51.18630085642111
+        },
+        "1e-05": {
+          "recall": 0.0,
+          "fpr": 0.0,
+          "precision": 0.0,
+          "alertas_dia": 0.0
+        }
+      }
+    }
+  },
+  "seleccionado": "random_forest"
+}

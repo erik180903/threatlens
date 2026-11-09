@@ -1,0 +1,59 @@
+# ------------------------------------------------------------------
+# ThreatLens — archivos que NO entran al repositorio
+# ------------------------------------------------------------------
+
+# Entornos y dependencias. Se reconstruyen con requirements.txt y
+# package.json; copiarlos seria copiar lo instalado en esta maquina.
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.pyc
+
+# Variables de entorno. Aqui van a vivir el secreto de Entra ID y la
+# cadena de conexion de MongoDB. Nunca, bajo ninguna circunstancia,
+# deben llegar a GitHub.
+.env
+.env.*
+*.key
+*.pem
+
+# ------------------------------------------------------------------
+# Corpus de entrenamiento: 41 GB. Son publicos y citables (DARPA
+# OpTC, LANL, Nazario, SpamAssassin, phishing_pot); el README dice
+# de donde se descargan. GitHub rechaza archivos de mas de 100 MB,
+# y varios de estos pasan los 3 GB.
+# ------------------------------------------------------------------
+*.gz
+*.zip
+*.7z
+*.tar
+*.txt.gz
+
+Entrenamiento_Malware/datos/
+Entrenamiento_AccesosRemotos/datos/
+Entrenamiento_Phishing/datos/
+Entrenamiento_Phishing/corpus/
+
+# ------------------------------------------------------------------
+# Datos derivados: eval.csv, benigno.csv, dia2.csv,
+# caracteristicas.csv, ventanas.csv, PhishingPot.csv. Todos salen de
+# correr los scripts sobre los corpus. El repositorio no guarda lo
+# que el mismo sabe reconstruir.
+# ------------------------------------------------------------------
+*.csv
+
+# ------------------------------------------------------------------
+# Modelo de 63 MB que no se desplego. Sus metricas estan en el
+# reporte; el binario lo regenera train_phishing_email.py.
+# ------------------------------------------------------------------
+Entrenamiento_Phishing/modelos/phishing_email_random_forest.joblib
+
+# ------------------------------------------------------------------
+# Basura del sistema operativo y de Office
+# ------------------------------------------------------------------
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
+*.tmp

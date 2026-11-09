@@ -1,0 +1,89 @@
+{
+  "prevalencia": 0.01,
+  "objetivos_precision": {
+    "alto": 0.9,
+    "medio": 0.5,
+    "bajo": 0.2
+  },
+  "nota": "Umbrales derivados de la curva PR del corpus de evaluacion y trasladados a la prevalencia indicada. Recalcular con la prevalencia real del entorno antes de operar.",
+  "modelos": {
+    "random_forest": {
+      "alto": {
+        "umbral": 0.935,
+        "recall": 0.0513,
+        "precision_esperada": 1.0,
+        "fpr": 0.0,
+        "alertas_por_1000": 0.51,
+        "verdaderas_por_1000": 0.51
+      },
+      "medio": {
+        "umbral": 0.891667,
+        "recall": 0.1414,
+        "precision_esperada": 0.5047,
+        "fpr": 0.0014,
+        "alertas_por_1000": 2.8,
+        "verdaderas_por_1000": 1.41
+      },
+      "bajo": {
+        "umbral": 0.613333,
+        "recall": 0.4308,
+        "precision_esperada": 0.2002,
+        "fpr": 0.01738,
+        "alertas_por_1000": 21.52,
+        "verdaderas_por_1000": 4.31
+      }
+    },
+    "svm": {
+      "alto": {
+        "umbral": 0.952162,
+        "recall": 0.1238,
+        "precision_esperada": 1.0,
+        "fpr": 0.0,
+        "alertas_por_1000": 1.24,
+        "verdaderas_por_1000": 1.24
+      },
+      "medio": {
+        "umbral": 0.941776,
+        "recall": 0.1456,
+        "precision_esperada": 0.512,
+        "fpr": 0.0014,
+        "alertas_por_1000": 2.84,
+        "verdaderas_por_1000": 1.46
+      },
+      "bajo": {
+        "umbral": 0.559887,
+        "recall": 0.5499,
+        "precision_esperada": 0.2005,
+        "fpr": 0.02215,
+        "alertas_por_1000": 27.43,
+        "verdaderas_por_1000": 5.5
+      }
+    },
+    "xgboost": {
+      "alto": {
+        "umbral": 0.995503,
+        "recall": 0.0687,
+        "precision_esperada": 1.0,
+        "fpr": 0.0,
+        "alertas_por_1000": 0.69,
+        "verdaderas_por_1000": 0.69
+      },
+      "medio": {
+        "umbral": 0.994142,
+        "recall": 0.0871,
+        "precision_esperada": 0.6107,
+        "fpr": 0.00056,
+        "alertas_por_1000": 1.43,
+        "verdaderas_por_1000": 0.87
+      },
+      "bajo": {
+        "umbral": 0.734802,
+        "recall": 0.4663,
+        "precision_esperada": 0.2079,
+        "fpr": 0.01794,
+        "alertas_por_1000": 22.43,
+        "verdaderas_por_1000": 4.66
+      }
+    }
+  }
+}

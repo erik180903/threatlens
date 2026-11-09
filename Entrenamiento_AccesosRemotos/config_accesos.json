@@ -1,0 +1,27 @@
+{
+  "_comentario": "Parametros del ENTORNO donde opera el detector. No tocan el modelo ni los umbrales: esos salen del entrenamiento y viven en modelos_accesos/. Para cambiar de escenario, cambia 'activo'.",
+
+  "activo": "laboratorio",
+
+  "perfiles": {
+    "laboratorio": {
+      "_descripcion": "Escenario de pruebas del Trabajo Terminal. Pocos equipos: A2 extrapola y cada alerta sale marcada con a2_fuera_de_rango.",
+      "equipos": 4,
+      "modo_alerta": "verificacion",
+      "dir_modelos": "modelos_accesos",
+      "inventario_autorizado": [
+        "mstsc.exe"
+      ]
+    },
+
+    "produccion": {
+      "_descripcion": "PyME de referencia del reporte. Declara aqui TODA herramienta de acceso remoto aprobada por la empresa: lo que no este en la lista y sea de terceros dispara alerta concluyente en cada sesion.",
+      "equipos": 50,
+      "modo_alerta": "verificacion",
+      "dir_modelos": "modelos_accesos",
+      "inventario_autorizado": [
+        "mstsc.exe"
+      ]
+    }
+  }
+}

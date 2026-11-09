@@ -1,0 +1,123 @@
+{
+  "modelo": "random_forest",
+  "caracteristicas": [
+    "ven_eventos",
+    "ven_logon",
+    "ven_logoff",
+    "ven_tgs",
+    "ven_tgt",
+    "ven_fallos",
+    "ven_tasa_fallo",
+    "ven_tipos_logon",
+    "ven_frac_network",
+    "ven_frac_remoteint",
+    "ven_frac_ntlm",
+    "ven_frac_kerberos",
+    "ven_duracion",
+    "ven_hora_dia",
+    "his_usr_eventos",
+    "his_usr_destinos",
+    "his_usr_origenes",
+    "his_par_visto",
+    "his_par_nuevo",
+    "his_origen_visto",
+    "his_origen_nuevo",
+    "his_frac_destino",
+    "his_usr_frac_hora",
+    "his_dst_eventos",
+    "his_dst_usuarios",
+    "his_dst_nuevo",
+    "his_frac_usr_en_dst",
+    "his_dst_por_usuario"
+  ],
+  "prevalencia": 1.05276713858621e-05,
+  "equipos_referencia": 50,
+  "ventanas_dia_pyme": 2928.215291649145,
+  "fpr_minimo_estimable": 1e-05,
+  "niveles": {
+    "alto": {
+      "umbral": 0.4825,
+      "fpr_objetivo": 3e-05,
+      "fpr_verificado": 1.469232436244495e-05,
+      "fp_en_verificacion": 4,
+      "fpr_ic95": [
+        4.003163895178805e-06,
+        3.76181857014435e-05
+      ],
+      "precision_ic95": [
+        0.14108899673909883,
+        0.6068589970781756
+      ],
+      "falsas_alarmas_dia_ic95": [
+        0.011722125732840333,
+        0.11015414661506408
+      ],
+      "recall": 0.5869565217391305,
+      "recall_ic": [
+        0.4433924238701789,
+        0.7171160670289898
+      ],
+      "precision_estimada": 0.2960639475960099,
+      "falsas_alarmas_dia_pyme": 0.043022288867980575,
+      "notifica": true,
+      "descripcion": "Alerta afirmativa y notificacion",
+      "estimacion_confiable": false
+    },
+    "medio": {
+      "umbral": 0.2425,
+      "fpr_objetivo": 0.0001,
+      "fpr_verificado": 6.611545963100227e-05,
+      "fp_en_verificacion": 18,
+      "fpr_ic95": [
+        3.9184211556245994e-05,
+        0.00010449093030889871
+      ],
+      "precision_ic95": [
+        0.06165712634196511,
+        0.14909710302737295
+      ],
+      "falsas_alarmas_dia_ic95": [
+        0.11473980747021466,
+        0.30597193996916233
+      ],
+      "recall": 0.6521739130434783,
+      "recall_ic": [
+        0.5076979217727255,
+        0.7731919373008194
+      ],
+      "precision_estimada": 0.09407800476164453,
+      "falsas_alarmas_dia_pyme": 0.1936002999059126,
+      "notifica": false,
+      "descripcion": "Aparece en el panel como sospechoso",
+      "estimacion_confiable": true
+    },
+    "bajo": {
+      "umbral": 0.03,
+      "fpr_objetivo": 0.001,
+      "fpr_verificado": 0.001392097733341659,
+      "fp_en_verificacion": 379,
+      "fpr_ic95": [
+        0.00125545682063223,
+        0.0015395531642513364
+      ],
+      "precision_ic95": [
+        0.006204839299134534,
+        0.007598258913111234
+      ],
+      "falsas_alarmas_dia_ic95": [
+        3.6762478601805135,
+        4.508143117867591
+      ],
+      "recall": 0.9130434782608695,
+      "recall_ic": [
+        0.796750643647758,
+        0.9656646881232924
+      ],
+      "precision_estimada": 0.00685756861965842,
+      "falsas_alarmas_dia_pyme": 4.0763618702411595,
+      "notifica": false,
+      "descripcion": "Queda registrado para revision",
+      "estimacion_confiable": true
+    }
+  }
+}
