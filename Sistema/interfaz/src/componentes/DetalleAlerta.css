@@ -1,0 +1,48 @@
+.detalle-alerta {
+  display: grid;
+  gap: 16px;
+  max-width: 1000px;
+}
+
+/* Aqui nace --color-nivel. Como las variables de CSS se heredan, todo
+   lo que este dentro de este elemento la puede leer: la barra lateral
+   de la cabecera, el numero de probabilidad y los valores destacados.
+   Ninguno de esos componentes recibe el nivel por props. */
+.detalle-alerta--alto {
+  --color-nivel: var(--alto);
+}
+
+.detalle-alerta--medio {
+  --color-nivel: var(--medio);
+}
+
+.detalle-alerta--bajo {
+  --color-nivel: var(--bajo);
+}
+
+.detalle-alerta__columnas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.detalle-alerta__rotulo {
+  margin: 0 0 10px;;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--texto-tenue);
+}
+
+.detalle-alerta__aviso {
+  margin: 0;
+  padding: 10px 14px;
+  border: 1px solid color-mix(in srgb, var(--medio) 45%, transparent);
+  border-left-width: 3px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--medio) 10%, transparent);
+  font-size: 13px;
+  color: var(--texto);
+}

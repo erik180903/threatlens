@@ -1,0 +1,86 @@
+.tabla-alertas__marco {
+  max-height: 420px;
+  overflow: auto;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  background: var(--superficie);
+}
+
+.tabla-alertas {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.tabla-alertas thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--texto-tenue);
+  background: var(--superficie);
+  border-bottom: 1px solid var(--borde);
+  white-space: nowrap;
+}
+
+.fila {
+  cursor: pointer;
+  border-bottom: 1px solid var(--borde);
+}
+
+.fila:last-child {
+  border-bottom: none;
+}
+
+.fila:hover {
+  background: color-mix(in srgb, var(--primario) 7%, transparent);
+}
+
+.fila:focus-visible {
+  outline: 2px solid var(--primario);
+  outline-offset: -2px;
+}
+
+.fila--actual {
+  background: color-mix(in srgb, var(--primario) 14%, transparent);
+}
+
+.fila td {
+  padding: 9px 14px;
+  vertical-align: middle;
+}
+
+.fila__fecha {
+  color: var(--texto-tenue);
+  white-space: nowrap;
+}
+
+.fila__descripcion {
+  color: var(--texto);
+  max-width: 360px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fila__equipo {
+  font-family: "Cascadia Mono", Consolas, monospace;
+  color: var(--texto);
+  white-space: nowrap;
+}
+
+.tabla-alertas__num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabla-alertas__vacio {
+  padding: 28px;
+  text-align: center;
+  color: var(--texto-tenue);
+}

@@ -1,0 +1,40 @@
+.campo-dato {
+  display: flex;
+  align-items: baseline;
+  Justify-content: space-between;
+  gap: 16px;
+  padding: 7px 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--borde) 55%, transparent);
+}
+
+.campo-dato:last-child {
+  border-bottom: none;
+}
+
+.campo-dato__etiqueta {
+  flex: 0 0 auto;
+  font-size: 12.5px;
+  color: var(--texto-tenue);
+}
+
+.campo-dato__valor {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: right;
+  font-size: 13px;
+  color: var(--texto);
+  overflow-wrap: anywhere;
+}
+
+.campo-dato__valor--mono {
+  font-family: "Cascadia Mono", Consolas, monospace;
+  font-size: 13px;
+}
+
+/* El color del valor destacado lo hereda del nivel de la alerta.
+   --color-nivel la define DetalleAlerta en el paso 5; mientras tanto
+   el respaldo deja el texto en su color normal. */
+.campo-dato__valor--destacado {
+  color: var(--color-nivel, var(--texto));
+  font-weight: 600;
+}

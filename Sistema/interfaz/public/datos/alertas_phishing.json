@@ -1,11 +1,11 @@
 [
   {
-    "id": "alert-ee82d07914d6",
+    "id": "alert-9d024c51a7d7",
     "tipo_amenaza": "phishing",
     "nivel_severidad": "medio",
     "descripcion": "Phishing detectado — no-reply@access-accsec.com",
     "equipo": "PC-GERENCIA",
-    "fecha": "2026-11-06T15:14:07",
+    "fecha": "2026-11-08T21:34:59",
     "estado": "nueva",
     "notificar": false,
     "n_eventos": 1,
@@ -97,12 +97,12 @@
     "recomendaciones": null
   },
   {
-    "id": "alert-b4d1cdf4d157",
+    "id": "alert-f05c43a8b264",
     "tipo_amenaza": "phishing",
     "nivel_severidad": "alto",
     "descripcion": "Phishing detectado — doble extension: Formato_2026.pdf.exe",
     "equipo": "PC-RRHH",
-    "fecha": "2026-11-06T15:14:07",
+    "fecha": "2026-11-08T21:34:59",
     "estado": "nueva",
     "notificar": true,
     "n_eventos": 1,

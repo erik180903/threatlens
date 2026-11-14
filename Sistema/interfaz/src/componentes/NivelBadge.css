@@ -1,0 +1,27 @@
+.nivel-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nivel-badge--alto {
+  color: var(--alto);
+  border-color: color-mix(in srgb, var(--alto) 45%, transparent);
+  background: color-mix(in srgb, var(--alto) 12%, transparent);
+}
+
+.nivel-badge--medio {
+  color: var(--medio);
+  border-color: color-mix(in srgb, var(--medio) 45%, transparent);
+  background: color-mix(in srgb, var(--medio) 12%, transparent);
+}
+
+.nivel-badge--bajo {
+  color: var(--bajo);
+  border-color: color-mix(in srgb, var(--bajo) 45%, transparent);
+  background: color-mix(in srgb, var(--bajo) 12%, transparent);
+}

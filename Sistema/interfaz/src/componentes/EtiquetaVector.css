@@ -1,0 +1,11 @@
+.etiqueta-vector {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--borde);
+  background: var(--fondo);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--texto-tenue);
+  white-space: nowrap;
+}

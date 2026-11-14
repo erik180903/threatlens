@@ -396,7 +396,7 @@ def _demo():
     ids = {d_["id"] for d_ in documentos}
     print(f"  documentos            : {len(documentos)}")
     print(f"  identificadores unicos: {len(ids)}")
-    salida = _SISTEMA / "datos"
+    salida = _SISTEMA / "interfaz" / "public" / "datos"
     salida.mkdir(parents=True, exist_ok=True)
     destino = salida / "alertas_phishing.json"
     destino.write_text(json.dumps(documentos, indent=2, ensure_ascii=False),

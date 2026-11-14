@@ -1,11 +1,11 @@
 [
   {
-    "id": "alert-9d8f05b2a53c",
+    "id": "alert-1ba542ea4ffd",
     "tipo_amenaza": "acceso_remoto",
     "nivel_severidad": "alto",
     "descripcion": "Fuerza bruta — 180 autenticaciones fallidas contra SRV-CONTA",
     "equipo": "SRV-CONTA",
-    "fecha": "2026-11-06T15:10:55",
+    "fecha": "2026-11-08T21:30:10",
     "estado": "nueva",
     "notificar": true,
     "n_eventos": 1,
@@ -48,12 +48,12 @@
     "recomendaciones": null
   },
   {
-    "id": "alert-25a17d82f9d4",
+    "id": "alert-7e5b3111323f",
     "tipo_amenaza": "acceso_remoto",
     "nivel_severidad": "alto",
     "descripcion": "Password spraying — 40 cuentas probadas desde 192.168.1.80",
     "equipo": "192.168.1.80",
-    "fecha": "2026-11-06T15:10:55",
+    "fecha": "2026-11-08T21:30:10",
     "estado": "nueva",
     "notificar": true,
     "n_eventos": 1,
@@ -96,12 +96,12 @@
     "recomendaciones": null
   },
   {
-    "id": "alert-2d4bc4f4a224",
+    "id": "alert-0c5d9382c96d",
     "tipo_amenaza": "acceso_remoto",
     "nivel_severidad": "alto",
     "descripcion": "Herramienta de acceso remoto no autorizada — anydesk.exe",
     "equipo": "PC-RECEPCION",
-    "fecha": "2026-11-06T15:10:55",
+    "fecha": "2026-11-08T21:30:10",
     "estado": "nueva",
     "notificar": true,
     "n_eventos": 1,
@@ -144,12 +144,12 @@
     "recomendaciones": null
   },
   {
-    "id": "alert-49bb57a9d1ec",
+    "id": "alert-1a0156074b04",
     "tipo_amenaza": "acceso_remoto",
     "nivel_severidad": "alto",
     "descripcion": "Conexion remota sospechosa — puerto 3389 en SRV-ARCHIVOS",
     "equipo": "SRV-ARCHIVOS",
-    "fecha": "2026-11-06T15:10:55",
+    "fecha": "2026-11-08T21:30:10",
     "estado": "nueva",
     "notificar": true,
     "n_eventos": 1,
@@ -196,12 +196,12 @@
     "recomendaciones": null
   },
   {
-    "id": "alert-fb6ed5834ce3",
+    "id": "alert-e9996cbc4bbb",
     "tipo_amenaza": "acceso_remoto",
     "nivel_severidad": "medio",
     "descripcion": "Conexion remota sospechosa — puerto 23 en SWITCH-1",
     "equipo": "SWITCH-1",
-    "fecha": "2026-11-06T15:10:55",
+    "fecha": "2026-11-08T21:30:10",
     "estado": "nueva",
     "notificar": false,
     "n_eventos": 1,
@@ -245,12 +245,12 @@
     "recomendaciones": null
   },
   {
-    "id": "alert-ef96469e81d7",
+    "id": "alert-52a4dfb58168",
     "tipo_amenaza": "acceso_remoto",
     "nivel_severidad": "alto",
     "descripcion": "Fuerza bruta — 180 autenticaciones fallidas contra SRV-NOMINA",
     "equipo": "SRV-NOMINA",
-    "fecha": "2026-11-06T15:10:55",
+    "fecha": "2026-11-08T21:30:10",
     "estado": "nueva",
     "notificar": true,
     "n_eventos": 1,

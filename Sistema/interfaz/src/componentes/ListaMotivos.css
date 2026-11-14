@@ -1,0 +1,22 @@
+.lista-motivos__items {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+
+.lista-motivos__items li {
+  font-size: 14px;
+  color: var(--texto);
+}
+
+.lista-motivos__items li::marker {
+  color: var(--texto-tenue);
+}
+
+.lista-motivos__nota {
+  margin: 12px 0 0;
+  font-size: 12px;
+  font-style: italic;
+  color: var(--texto-tenue);
+}

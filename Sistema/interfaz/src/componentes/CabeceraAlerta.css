@@ -1,0 +1,106 @@
+.cabecera-alerta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 18px 20px;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-left: 3px solid var(--color-nivel, var(--borde));
+  border-radius: 12px;
+}
+
+.cabecera-alerta__principal {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.cabecera-alerta__id {
+  font-family: "Cascadia Mono", Consolas, monospace;
+  font-size: 12px;
+  color: var(--texto-tenue);
+}
+
+.cabecera-alerta__titulo {
+  margin: 6px 0 8px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--texto);
+}
+
+.cabecera-alerta__meta {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--texto-tenue);
+}
+
+.cabecera-alerta__punto {
+  opacity: 0.5;
+}
+
+.cabecera-alerta__lateral {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.cabecera-alerta__etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.cabecera-alerta__tecnico {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--borde);
+  background: var(--fondo);
+  font-size: 12px;
+  color: var(--texto-tenue);
+  white-space: nowrap;
+}
+
+.veredicto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 128px;
+  padding: 10px 16px 12px;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  background: var(--fondo);
+}
+
+.veredicto__rotulo {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--texto-tenue);
+}
+
+.veredicto__numero {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-nivel, var(--texto));
+  font-variant-numeric: tabular-nums;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--color-nivel, var(--borde));
+}
+
+.veredicto__texto {
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--activo);
+}

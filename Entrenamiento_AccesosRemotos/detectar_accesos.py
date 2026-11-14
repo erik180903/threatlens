@@ -717,7 +717,10 @@ def _demo():
     ids = {d["id"] for d in documentos}
     print(f"  documentos            : {len(documentos)}")
     print(f"  identificadores unicos: {len(ids)}")
-    salida = os.path.join(_SISTEMA, "datos")
+        # Temporal: mientras no exista el repositorio ni la API, la interfaz
+    # lee las alertas como archivos estaticos. public/ es la carpeta que
+    # Vite sirve tal cual en la raiz del sitio.
+    salida = os.path.join(_SISTEMA, "interfaz", "public", "datos")
     os.makedirs(salida, exist_ok=True)
     destino = os.path.join(salida, "alertas_accesos.json")
     with open(destino, "w", encoding="utf-8") as f:

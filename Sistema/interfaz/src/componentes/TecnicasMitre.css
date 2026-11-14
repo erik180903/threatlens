@@ -1,0 +1,33 @@
+.tecnicas-mitre {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tecnica {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: var(--superficie);
+  text-decoration: none;
+  transition: border-color 120ms;
+}
+
+.tecnica:hover {
+  border-color: var(--primario);
+}
+
+.tecnica__id {
+  font-family: "Cascadia Mono", Consolas, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primario);
+}
+
+.tecnica__nombre {
+  font-size: 13px;
+  color: var(--texto);
+}
