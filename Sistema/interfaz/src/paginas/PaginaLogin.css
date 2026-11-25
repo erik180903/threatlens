@@ -1,0 +1,88 @@
+/* Pantalla de acceso. Centra una tarjeta sobre el fondo oscuro. */
+
+.login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--fondo);
+}
+
+.login__tarjeta {
+  width: 100%;
+  max-width: 360px;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.login__marca {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--activo);
+}
+
+.login__subtitulo {
+  margin: 0 0 6px;
+  color: var(--texto-tenue);
+  font-size: 14px;
+}
+
+.login__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--texto-tenue);
+}
+
+.login__campo input,
+.login__campo select {
+  background: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--texto);
+  font-size: 14px;
+}
+
+.login__campo input:focus,
+.login__campo select:focus {
+  outline: none;
+  border-color: var(--primario);
+}
+
+.login__error {
+  margin: 0;
+  color: var(--alto);
+  font-size: 13px;
+}
+
+.login__boton {
+  margin-top: 4px;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primario);
+  color: #04121c;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login__boton:hover {
+  filter: brightness(1.07);
+}
+
+.login__nota {
+  margin: 6px 0 0;
+  color: var(--texto-tenue);
+  font-size: 12px;
+  line-height: 1.45;
+}

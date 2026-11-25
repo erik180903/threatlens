@@ -1,0 +1,175 @@
+/* Pantalla de administracion: equipos monitoreados y cuentas de usuario. */
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.admin__seccion {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.admin__cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.admin__titulo {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.admin__agregar {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primario);
+  color: #04121c;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin__agregar:hover {
+  filter: brightness(1.07);
+}
+
+/* Scroll horizontal de la tabla en pantallas angostas. */
+.admin__marco {
+  overflow-x: auto;
+}
+
+.admin__tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.admin__tabla th {
+  text-align: left;
+  padding: 8px 12px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--texto-tenue);
+  border-bottom: 1px solid var(--borde);
+  white-space: nowrap;
+}
+
+.admin__tabla td {
+  padding: 10px 12px;
+  color: var(--texto);
+  border-bottom: 1px solid color-mix(in srgb, var(--borde) 55%, transparent);
+  white-space: nowrap;
+}
+
+.admin__tabla tr:last-child td {
+  border-bottom: none;
+}
+
+.admin__mono {
+  font-family: "Cascadia Mono", Consolas, monospace;
+  color: var(--texto-tenue);
+}
+
+.admin__rol {
+  text-transform: capitalize;
+}
+
+.admin__acciones {
+  text-align: right;
+}
+
+.admin__baja {
+  padding: 5px 10px;
+  border: 1px solid var(--borde);
+  border-radius: 7px;
+  background: transparent;
+  color: var(--texto-tenue);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.admin__baja:hover {
+  background: var(--fondo);
+  color: var(--texto);
+  border-color: color-mix(in srgb, var(--alto) 55%, var(--borde));
+}
+
+.estado {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.estado--activo {
+  color: var(--bajo);
+}
+
+.estado--inactivo {
+  color: var(--texto-tenue);
+}
+
+/* --- Formularios de alta dentro del modal --- */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 280px;
+}
+
+.formulario__titulo {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.formulario__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--texto-tenue);
+}
+
+.formulario__campo input,
+.formulario__campo select {
+  background: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--texto);
+  font-size: 14px;
+}
+
+.formulario__campo input:focus,
+.formulario__campo select:focus {
+  outline: none;
+  border-color: var(--primario);
+}
+
+.formulario__boton {
+  margin-top: 4px;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primario);
+  color: #04121c;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.formulario__boton:hover {
+  filter: brightness(1.07);
+}
