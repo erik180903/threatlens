@@ -17,6 +17,10 @@ __pycache__/
 .env.*
 *.key
 *.pem
+*recovery-code*
+*recovery_codes*
+*codigos-recuperacion*
+*backup-codes*
 
 # ------------------------------------------------------------------
 # Corpus de entrenamiento: 41 GB. Son publicos y citables (DARPA
