@@ -1,7 +1,9 @@
+import sys
 from pathlib import Path
 from dotenv import load_dotenv
 
-# El .env (con GEMINI_API_KEY y MONGODB_URI) vive en Sistema/repositorio/
+# respuesta.py vive en Sistema/respuesta/; el .env en Sistema/repositorio/
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "respuesta"))
 load_dotenv(Path(__file__).resolve().parent.parent / "repositorio" / ".env")
 
 from respuesta import generar_recomendaciones

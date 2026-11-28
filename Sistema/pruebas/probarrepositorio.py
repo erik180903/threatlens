@@ -8,6 +8,12 @@ reprocesar no duplique.
 
 Se corre con:  python probar_repositorio.py
 """
+import sys
+from pathlib import Path
+
+# repositorio.py vive en Sistema/repositorio/ (carpeta hermana)
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "repositorio"))
+
 import mongomock
 
 from repositorio import Repositorio

@@ -61,3 +61,11 @@ desktop.ini
 .DS_Store
 ~$*
 *.tmp
+# ------------------------------------------------------------------
+# Archivos de trabajo sueltos en la raiz (capturas, borradores de
+# notas) que no son parte del proyecto.
+# ------------------------------------------------------------------
+/Error*.png
+/Prueba de Advanced Hunting.png
+/PrimerEntregaParcial.xlsx
+/crear el repositorio en GitHub y subirlo.docx

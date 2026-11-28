@@ -1,4 +1,10 @@
 import csv
+import sys
+from pathlib import Path
+
+# normalizador.py vive en Sistema/normalizacion/ (carpeta hermana)
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "normalizacion"))
+
 from normalizador import normaliza, CAMPOS_FECHA
 
 MESES = {
